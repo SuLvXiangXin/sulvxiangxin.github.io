@@ -1,1 +1,130 @@
-Hello World
+<!-- Page adopted from https://github.com/jonbarron/website -->
+
+
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Chun Gu</title>
+  
+  <meta name="author" content="Chun Gu">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Chun Gu 顾淳</name>
+              </p>
+              <p>I'm an undergraduate student at Fudan University under the supervision of
+                <a href="https://www.robots.ox.ac.uk/~lz/">Prof. Li Zhang</a>.
+              </p>
+              <p>
+                I'm interested in Computer Vision, especially in 3D reconstruction.
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:cgu19@fudan.edu.cn">Email</a> &nbsp/&nbsp
+<!--                <a href="data/JonBarron-CV.pdf">CV</a> &nbsp/&nbsp-->
+<!--                <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Google Scholar</a> &nbsp/&nbsp-->
+                <a href="https://github.com/SuLvXiangXin/">Github</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <a href="images/photo.jpeg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/photo.jpeg" class="hoverZoomLink"></a>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Publications & Projects</heading>
+              <p>
+                I'm interested in computer vision, machine learning, optimization, and image processing. Much of my research is about inferring the physical world (shape, motion, color, light, etc) from images. Representative papers are <span class="highlight">highlighted</span>.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+				
+
+    <tr onmouseout="zipnerf_stop()" onmouseover="zipnerf_start()"  bgcolor="#ffffd0">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <div class="two" id='zipnerf_image'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/zipnerf.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/zipnerf.png' width="160">
+        </div>
+        <script type="text/javascript">
+          function zipnerf_start() {
+            document.getElementById('zipnerf_image').style.opacity = "1";
+          }
+
+          function zipnerf_stop() {
+            document.getElementById('zipnerf_image').style.opacity = "0";
+          }
+          zipnerf_stop()
+        </script>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="">
+          <papertitle>Unofficial implementation of "Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields"</papertitle>
+        </a>
+        <br>
+        <strong>Chun Gu</strong>
+        <br>
+        <em>arXiv</em>, 2023
+        <br>
+        <a href="https://github.com/SuLvXiangXin/zipnerf-pytorch">project page</a>
+        <p></p>
+        <p>An unofficial pytorch implementation of  <a href="https://arxiv.org/abs/2304.06706">"Zip-NeRF: Anti-Aliased Grid-Based Neural
+          Radiance Fields"</a> based on <a href="https://github.com/google-research/multinerf">multinerf</a>.</p>
+      </td>
+    </tr>
+    <tr bgcolor="#ffffd0">
+      <td style="padding:20px;width:25%;vertical-align:middle">
+        <div class="one">
+          <img src='images/dsnerf.png' width="160">
+        </div>
+      </td>
+      <td style="padding:20px;width:75%;vertical-align:middle">
+        <a href="https://arxiv.org/abs/2303.09952/">
+          <papertitle>Single-view Neural Radiance Fields with Depth Teacher</papertitle>
+        </a>
+        <br>
+        <a href="https://github.com/519401113">Yurui Chen</a>,
+        <strong>Chun Gu</strong>,
+        <a href="http://feihuzhang.com/">Feihu Zhang</a>,
+        <a href="https://www.robots.ox.ac.uk/~lz/">Li Zhang</a>,
+        <br>
+        <em>arXiv</em>, 2023
+        <br>
+        <a href="https://arxiv.org/abs/2303.09952">arXiv</a>
+        <p></p>
+        <p>
+        Combining the (coarse) planar rendering and the (fine) volume rendering to achieve higher rendering
+          quality and better generalizations. A depth teacher net that predicts dense
+          pseudo depth maps is used to supervise the joint rendering mechanism and boost the learning of
+          consistent 3D geometry.
+        </p>
+      </td>
+    </tr>
+
+
+        </tbody></table>
+
+				
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
