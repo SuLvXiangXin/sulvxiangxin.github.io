@@ -1,156 +1,248 @@
-<!-- Page adopted from https://github.com/jonbarron/website -->
-
-
 <!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <title>Chun Gu</title>
-  
-  <meta name="author" content="Chun Gu">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
-</head>
+    <title>Chun Gu</title>
 
-<body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Chun Gu 顾淳</name>
-              </p>
-              <p>I'm an undergraduate student at Fudan University under the supervision of
-                <a href="https://www.robots.ox.ac.uk/~lz/">Prof. Li Zhang</a>.
-              </p>
-              <p>
-                I'm interested in Computer Vision, especially in 3D reconstruction.
-              </p>
-              <p style="text-align:center">
-                <a href="mailto:cgu19@fudan.edu.cn">Email</a> &nbsp/&nbsp
-<!--                <a href="data/JonBarron-CV.pdf">CV</a> &nbsp/&nbsp-->
-<!--                <a href="https://scholar.google.com/citations?hl=en&user=jktWnL8AAAAJ">Google Scholar</a> &nbsp/&nbsp-->
-                <a href="https://github.com/SuLvXiangXin/">Github</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/photo.jpeg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/photo.jpeg" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Publications & Projects</heading>
-<!--              <p>-->
-<!--                I'm interested in computer vision, machine learning, optimization, and image processing. Much of my research is about inferring the physical world (shape, motion, color, light, etc) from images. Representative papers are <span class="highlight">highlighted</span>.-->
-<!--              </p>-->
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-				
+    <meta name="author" content="Chun Gu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <tr onmouseout="zipnerf_stop()" onmouseover="zipnerf_start()">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+    <script>
+        function fetchZipNeRFStars() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://api.github.com/repos/SuLvXiangXin/zipnerf-pytorch", true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    var repo = JSON.parse(xhr.responseText);
+                    document.getElementById("github-stars").innerText = "(" + repo.stargazers_count + " stars🌟)";
+                } else {
+                    document.getElementById("github-stars").innerText = "Error fetching stars";
+                }
+            };
+            xhr.send();
+        }
+        setInterval(fetchZipNeRFStars, 60000);
+    </script>
+  </head>
+
+  <body>
+    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr style="padding:0px">
+              <td style="padding:2.5%;width:63%;vertical-align:middle">
+                <p class="name" style="text-align: center;">
+                  Chun Gu
+                </p>
+                <p>I'm an undergraduate student at Fudan University under the supervision of
+                <a href="https://lzrobots.github.io/">Prof. Li Zhang</a>.
+                </p>
+                <p>
+                  I'm interested in Computer Vision and Graphics, especially in 3D reconstruction.
+                </p>
+                <p style="text-align:center">
+                  <a href="mailto:cgu19@fudan.edu.cn">Email</a> &nbsp/&nbsp
+                  <a href="https://github.com/SuLvXiangXin/">Github</a>
+                </p>
+              </td>
+              <td style="padding:2.5%;width:40%;max-width:40%">
+                <a href="images/photo.jpg"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/photo_circle.jpg" class="hoverZoomLink"></a>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+              <tr>
+              <td style="padding:20px;width:100%;vertical-align:middle">
+                <h2>Publications & Projects</h2>
+              </td>
+            </tr>
+          </tbody></table>
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+
+
+      <tr onmouseout="pvg_stop()" onmouseover="pvg_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <div class="two" id='zipnerf_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/zipnerf.mp4" type="video/mp4">
+          <div class="two" id='pvg'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/pvg/video.mp4" type="video/mp4">
           Your browser does not support the video tag.
           </video></div>
-          <img src='images/zipnerf.png' width="160">
+          <img src='images/pvg/capture.jpg' width="160">
         </div>
         <script type="text/javascript">
-          function zipnerf_start() {
-            document.getElementById('zipnerf_image').style.opacity = "1";
+          function pvg_start() {
+            document.getElementById('pvg').style.opacity = "1";
           }
 
-          function zipnerf_stop() {
-            document.getElementById('zipnerf_image').style.opacity = "0";
+          function pvg_stop() {
+            document.getElementById('pvg').style.opacity = "0";
           }
-          zipnerf_stop()
+          pvg_stop()
         </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="">
-          <papertitle>(190 stars🌟)Unofficial implementation of "Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields"</papertitle>
+        <a href="https://fudan-zvg.github.io/PVG/">
+          <span class="papertitle">Periodic Vibration Gaussian: Dynamic Urban Scene Reconstruction and Real-time Rendering</span>
         </a>
         <br>
-        <strong>Chun Gu</strong>
+        <a href="https://github.com/519401113">Yurui Chen*</a>,
+        <strong>Chun Gu*</strong>,
+        <a href="https://github.com/selfspin">Junzhe Jiang</a>,
+        <a href="https://xiatian-zhu.github.io/">Xiatian Zhu</a>,
+        <a href="https://lzrobots.github.io/">Li Zhang</a>
         <br>
+        <em>arXiv</em>, 2023
         <br>
-        <a href="https://github.com/SuLvXiangXin/zipnerf-pytorch">project page</a>
+        <a href="https://arxiv.org/abs/2311.18561">arXiv</a>
+        /
+        <a href="https://fudan-zvg.github.io/PVG/">project page</a>
+        /
+        <a href="https://github.com/fudan-zvg/PVG">code</a>
         <p></p>
-        <p>An unofficial pytorch implementation of  <a href="https://arxiv.org/abs/2304.06706">"Zip-NeRF: Anti-Aliased Grid-Based Neural
-          Radiance Fields"</a> based on <a href="https://github.com/google-research/multinerf">multinerf</a>.</p>
-      </td>
-    </tr>
-
-    </tr>
-    <tr>
-      <td style="padding:20px;width:25%;vertical-align:middle">
-        <div class="one">
-          <img src='images/demo.png' width="160">
-        </div>
-      </td>
-      <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://sulvxiangxin.github.io/demo/">
-          <papertitle>A real-time neural rendering demo of large-scale 3D scenes</papertitle>
-        </a>
-        <br>
-        <strong>Chun Gu</strong>,
-        Yueming Xu,
-        <p></p>
-        <a href="https://sulvxiangxin.github.io/demo/">project page</a>
         <p>
-        A real-time large-scale scene renderer demo using
-          <a href="https://arxiv.org/abs/1911.10127">BlendedMVS</a>(a large-scale MVS dataset),
-          based on <a href="https://github.com/google-research/jax3d/tree/main/jax3d/projects/mobilenerf">
-          MobileNeRF</a>.
+         A unified representation model for large-scale dynamic urban scene reconstruction.
         </p>
       </td>
     </tr>
 
-    <tr>
+
+      <tr onmouseout="r3dg_stop()" onmouseover="r3dg_start()">
       <td style="padding:20px;width:25%;vertical-align:middle">
         <div class="one">
-          <img src='images/dsnerf.png' width="160">
+          <div class="two" id='relightable_3dgs'><video  width=100% height=100% muted autoplay loop>
+          <source src="images/relightable_3DGS/pbr_light.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+          </video></div>
+          <img src='images/relightable_3DGS/capture.jpg' width="160">
         </div>
+        <script type="text/javascript">
+          function r3dg_start() {
+            document.getElementById('relightable_3dgs').style.opacity = "1";
+          }
+
+          function r3dg_stop() {
+            document.getElementById('relightable_3dgs').style.opacity = "0";
+          }
+          r3dg_stop()
+        </script>
       </td>
       <td style="padding:20px;width:75%;vertical-align:middle">
-        <a href="https://arxiv.org/abs/2303.09952/">
-          <papertitle>Single-view Neural Radiance Fields with Depth Teacher</papertitle>
+        <a href="https://nju-3dv.github.io/projects/Relightable3DGaussian/">
+          <span class="papertitle">Relightable 3D Gaussian: Real-time Point Cloud Relighting with BRDF Decomposition and Ray Tracing</span>
         </a>
         <br>
-        <a href="https://github.com/519401113">Yurui Chen</a>,
-        <strong>Chun Gu</strong>,
-        <a href="http://feihuzhang.com/">Feihu Zhang</a>,
-        <a href="https://www.robots.ox.ac.uk/~lz/">Li Zhang</a>,
+        <a href="http://ygaojiany.github.io/">Jian Gao*</a>,
+        <strong>Chun Gu*</strong>,
+        <a href="https://scholar.google.com/citations?user=VhhHLhIAAAAJ&hl=en">Youtian Lin</a>,
+        <a href="http://zhuhao.cc/home/">Hao Zhu</a>,
+        <a href="https://cite.nju.edu.cn/People/Faculty/20190621/i5054.html">Xun Cao</a>,
+        <a href="https://lzrobots.github.io/">Li Zhang</a>,
+        <a href="https://yoyo000.github.io/">Yao Yao</a>
         <br>
-        <em>ICLR workshop 2023</em>
+        <em>arXiv</em>, 2023
         <br>
-        <a href="https://arxiv.org/abs/2303.09952">arXiv</a>
+        <a href="https://arxiv.org/abs/2311.16043">arXiv</a>
+        /
+        <a href="https://nju-3dv.github.io/projects/Relightable3DGaussian/">project page</a>
+        /
+        <a href="https://github.com/NJU-3DV/Relightable3DGaussian">code</a>
         <p></p>
         <p>
+         A novel differentiable point-based rendering framework for material and lighting decomposition from multi-view images, enabling editing, ray-tracing, and real-time relighting of the 3D point cloud.
+        </p>
+      </td>
+    </tr>
+
+
+      <tr onmouseout="zipnerf_stop()" onmouseover="zipnerf_start()">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='zipnerf_image'><video  width=100% height=100% muted autoplay loop>
+            <source src="images/zipnerf/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='images/zipnerf/capture.jpg' width="160">
+          </div>
+          <script type="text/javascript">
+            function zipnerf_start() {
+              document.getElementById('zipnerf_image').style.opacity = "1";
+            }
+
+            function zipnerf_stop() {
+              document.getElementById('zipnerf_image').style.opacity = "0";
+            }
+            zipnerf_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://github.com/SuLvXiangXin/zipnerf-pytorch">
+          <span id="github-stars">Loading stars...</span>
+            <span class="papertitle">Unofficial implementation of "Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields"</span>
+          </a>
+            <script>fetchZipNeRFStars();</script>
+          <br>
+          <strong>Chun Gu</strong>
+          <br>
+          <a href="https://github.com/SuLvXiangXin/zipnerf-pytorch">code</a>
+          <p></p>
+          <p>An unofficial pytorch implementation of  <a href="https://arxiv.org/abs/2304.06706">"Zip-NeRF: Anti-Aliased Grid-Based Neural
+          Radiance Fields"</a> based on <a href="https://github.com/google-research/multinerf">multinerf</a>.
+          </p>
+        </td>
+      </tr>
+
+
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/DT-NeRF/depth.jpg" alt="clean-usnob" width="160" height="160">
+        </td>
+        <td width="75%" valign="middle">
+          <a href="https://arxiv.org/abs/2303.09952">
+            <span class="papertitle">Single-view Neural Radiance Fields with Depth Teacher</span>
+          </a>
+          <br>
+            <a href="https://github.com/519401113">Yurui Chen</a>,
+            <strong>Chun Gu</strong>,
+            <a href="http://feihuzhang.com/">Feihu Zhang</a>,
+            <a href="https://lzrobots.github.io/">Li Zhang</a>,
+          <br>
+          <em>ICLR workshop 2023</em>
+          <br>
+          <a href="https://arxiv.org/abs/2303.09952">arXiv</a>
+          <p>
         Combining the (coarse) planar rendering and the (fine) volume rendering to achieve higher rendering
           quality and better generalizations. A depth teacher net that predicts dense
           pseudo depth maps is used to supervise the joint rendering mechanism and boost the learning of
           consistent 3D geometry.
         </p>
-      </td>
-    </tr>
+        </td>
+      </tr>
+
+          </tbody></table>
 
 
+          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+              <td style="padding:0px">
+                <br>
+                <p style="text-align:center;font-size:small;">
+                  The website template was borrowed from <a href="https://jonbarron.info/">Jon Barron</a>.
 
-        </tbody></table>
-
-				
-      </td>
-    </tr>
-  </table>
-</body>
-
+                </p>
+              </td>
+            </tr>
+          </tbody></table>
+        </td>
+      </tr>
+    </table>
+  </body>
 </html>
