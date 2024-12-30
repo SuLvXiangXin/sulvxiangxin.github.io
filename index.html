@@ -40,7 +40,7 @@
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
                 <p class="name" style="text-align: center;">
-                  Chun Gu
+                  Chun Gu - 顾淳
                 </p>
                 <p>I'm a first-year Ph.D. student at Fudan University under the supervision of
                 <a href="https://lzrobots.github.io/">Prof. Li Zhang</a>.
@@ -67,6 +67,119 @@
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       
+      <tr onmouseout="irgs_stop()" onmouseover="irgs_start()">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='irgs'><video  width=100% height=100% muted autoplay loop>
+            <source src="images/irgs/teaser.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='images/irgs/capture.jpg' width="160">
+          </div>
+          <script type="text/javascript">
+            function irgs_start() {
+              document.getElementById('irgs').style.opacity = "1";
+            }
+  
+            function irgs_stop() {
+              document.getElementById('irgs').style.opacity = "0";
+            }
+            irgs_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://fudan-zvg.github.io/IRGS">
+            <span class="papertitle">IRGS: Inter-Reflective Gaussian Splatting with 2D Gaussian Ray Tracing</span>
+          </a>
+          <br>
+          <strong>Chun Gu</strong>,
+          Xiaofei Wei,
+          Zixuan Zeng,
+          <a href="https://yaoyuxuanyyds.github.io/">Yuxuan Yao</a>,
+          <a href="https://lzrobots.github.io/">Li Zhang</a>,
+          <br>
+          <em>arXiv</em>, 2024
+          <br>
+          <a href="https://arxiv.org/abs/2412.15867">arXiv</a>
+          /
+          <a href="https://fudan-zvg.github.io/IRGS">project page</a>
+          /
+          <a href="https://github.com/fudan-zvg/IRGS">code  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/fudan-zvg/IRGS"></span></a>
+          <p></p>
+          <p>
+            In this paper, we introduce inter-reflective Gaussian splatting for inverse rendering. We apply the full rendering equation without simplification and compute incident radiance on the fly using the proposed differentiable 2D Gaussian ray tracing. 
+          </p>
+        </td>
+      </tr>
+      
+      <tr onmouseout="gstracer_stop()" onmouseover="gstracer_start()">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/gstracer/capture.jpg" alt="clean-usnob" width="160">
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://github.com/fudan-zvg/gaussian-raytracing">
+            <span class="papertitle">An implementation of 3D Gaussian Ray Tracing</span>
+          </a>
+          <br>
+          <strong>Chun Gu</strong>
+          <br>
+          <em>Open-source Project</em>
+          <br>
+          <a href="https://github.com/fudan-zvg/gaussian-raytracing">code  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/fudan-zvg/gaussian-raytracing"></span></a>
+          /
+          <a href="https://github.com/fudan-zvg/gtracer">gstracer backend  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/fudan-zvg/gtracer"></span></a>
+          <p></p>
+          <p>
+            An implementation of 3D Gaussian Ray Tracing, inspired by the work 3D Gaussian Ray Tracing: Fast Tracing of Particle Scenes.
+          </p>
+        </td>
+      </tr>
+
+      <tr onmouseout="refgs_stop()" onmouseover="refgs_start()">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='ref_gaussian'><video  width=100% height=100% muted autoplay loop>
+            <source src="images/ref-gaussian/teaser.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='images/ref-gaussian/capture.jpg' width="160">
+          </div>
+          <script type="text/javascript">
+            function refgs_start() {
+              document.getElementById('ref_gaussian').style.opacity = "1";
+            }
+  
+            function refgs_stop() {
+              document.getElementById('ref_gaussian').style.opacity = "0";
+            }
+            refgs_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://fudan-zvg.github.io/ref-gaussian/">
+            <span class="papertitle">Ref-Gaussian: Reflective Gaussian Splatting</span>
+          </a>
+          <br>
+          <a href="https://yaoyuxuanyyds.github.io/">Yuxuan Yao*</a>,
+          Zixuan Zeng*,
+          <strong>Chun Gu</strong>,
+          <a href="https://xiatian-zhu.github.io/">Xiatian Zhu</a>,
+          <a href="https://lzrobots.github.io/">Li Zhang</a>,
+          <br>
+          <em>arXiv</em>, 2024
+          <br>
+          <a href="https://arxiv.org/abs/2412.19282">arXiv</a>
+          /
+          <a href="https://fudan-zvg.github.io/ref-gaussian">project page</a>
+          /
+          <a href="https://github.com/fudan-zvg/ref-gaussian">code  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/fudan-zvg/ref-gaussian"></span></a>
+          <p></p>
+          <p>
+            A Reflective Gaussian splatting framework characterized with two components: (I) Physically based deferred rendering; (II) Gaussian-grounded inter-reflection.
+          </p>
+        </td>
+      </tr>
+
       <td style="padding:20px;width:25%;vertical-align:middle">
         <img src="images/shenlan-sds/shenlan-sds.jpg" alt="clean-usnob" width="160">
       </td>
@@ -107,7 +220,7 @@
           /
           <a href="https://fudan-zvg.github.io/tet-splatting/">project page</a>
           /
-          <a href="https://github.com/fudan-zvg/tet-splatting">code</a>
+          <a href="https://github.com/fudan-zvg/tet-splatting">code  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/fudan-zvg/tet-splatting"></span></a>
           <p></p>
           <p>
             Integrating surface-based volumetric rendering within a structured tetrahedral grid, utilizing tetrahedra for splatting.
@@ -133,7 +246,7 @@
           <br>
           <a href="https://arxiv.org/abs/2404.02148">arXiv</a>
           /
-          <a href="https://github.com/fudan-zvg/diffusion-square">code</a>
+          <a href="https://github.com/fudan-zvg/diffusion-square">code  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/fudan-zvg/diffusion-square"></span></a>
           <p></p>
           <p>
             In this paper, we propose to achieve 4D generation from directly sampling the dense multi-view multi-frame observation of dynamic content by composing the estimated score of pretrained video and multi-view diffusion models that have learned strong prior of dynamic and geometry.
@@ -179,7 +292,7 @@
         /
         <a href="https://fudan-zvg.github.io/PVG/">project page</a>
         /
-        <a href="https://github.com/fudan-zvg/PVG">code</a>
+        <a href="https://github.com/fudan-zvg/PVG">code  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/fudan-zvg/PVG"></span></a>
         <p></p>
         <p>
          A unified representation model for large-scale dynamic urban scene reconstruction.
@@ -227,7 +340,7 @@
         /
         <a href="https://nju-3dv.github.io/projects/Relightable3DGaussian/">project page</a>
         /
-        <a href="https://github.com/NJU-3DV/Relightable3DGaussian">code</a>
+        <a href="https://github.com/NJU-3DV/Relightable3DGaussian">code  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/NJU-3DV/Relightable3DGaussian"></span></a>
         <p></p>
         <p>
          A novel differentiable point-based rendering framework for material and lighting decomposition from multi-view images, enabling editing, ray-tracing, and real-time relighting of the 3D point cloud.
@@ -258,14 +371,14 @@
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
           <a href="https://github.com/SuLvXiangXin/zipnerf-pytorch">
-          <span id="github-stars">Loading stars...</span>
-            <span class="papertitle">Unofficial implementation of "Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields"</span>
+            Unofficial implementation of "Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields"</span>
           </a>
-            <script>fetchZipNeRFStars();</script>
           <br>
           <strong>Chun Gu</strong>
           <br>
-          <a href="https://github.com/SuLvXiangXin/zipnerf-pytorch">code</a>
+          <em>Open-source Project</em>
+          <br>
+          <a href="https://github.com/SuLvXiangXin/zipnerf-pytorch">code  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/SuLvXiangXin/zipnerf-pytorch"></span></a>
           <p></p>
           <p>An unofficial pytorch implementation of  <a href="https://arxiv.org/abs/2304.06706">"Zip-NeRF: Anti-Aliased Grid-Based Neural
           Radiance Fields"</a> based on <a href="https://github.com/google-research/multinerf">multinerf</a>.
