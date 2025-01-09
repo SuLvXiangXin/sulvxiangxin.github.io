@@ -13,23 +13,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <link rel="manifest" href="images/favicon/site.webmanifest">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-
-    <script>
-        function fetchZipNeRFStars() {
-            var xhr = new XMLHttpRequest();
-            xhr.open("GET", "https://api.github.com/repos/SuLvXiangXin/zipnerf-pytorch", true);
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    var repo = JSON.parse(xhr.responseText);
-                    document.getElementById("github-stars").innerText = "(" + repo.stargazers_count + " stars🌟)";
-                } else {
-                    document.getElementById("github-stars").innerText = "Error fetching stars";
-                }
-            };
-            xhr.send();
-        }
-        setInterval(fetchZipNeRFStars, 60000);
-    </script>
   </head>
 
   <body>
@@ -96,7 +79,7 @@
           Xiaofei Wei,
           Zixuan Zeng,
           <a href="https://yaoyuxuanyyds.github.io/">Yuxuan Yao</a>,
-          <a href="https://lzrobots.github.io/">Li Zhang</a>,
+          <a href="https://lzrobots.github.io/">Li Zhang</a>
           <br>
           <em>arXiv</em>, 2024
           <br>
@@ -164,7 +147,7 @@
           Zixuan Zeng*,
           <strong>Chun Gu</strong>,
           <a href="https://xiatian-zhu.github.io/">Xiatian Zhu</a>,
-          <a href="https://lzrobots.github.io/">Li Zhang</a>,
+          <a href="https://lzrobots.github.io/">Li Zhang</a>
           <br>
           <em>arXiv</em>, 2024
           <br>
@@ -201,7 +184,23 @@
 
       <tr onmouseout="tetsplatting_stop()" onmouseover="tetsplatting_start()">
         <td style="padding:20px;width:25%;vertical-align:middle">
-          <img src="images/tetsplatting/pipeline.jpg" alt="clean-usnob" width="160">
+          <div class="one">
+            <div class="two" id='tetsplatting'><video  width=100% height=100% muted autoplay loop>
+            <source src="images/tetsplatting/teaser.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='images/tetsplatting/pipeline.jpg' width="160">
+          </div>
+          <script type="text/javascript">
+            function tetsplatting_start() {
+              document.getElementById('tetsplatting').style.opacity = "1";
+            }
+  
+            function tetsplatting_stop() {
+              document.getElementById('tetsplatting').style.opacity = "0";
+            }
+            refgs_stop()
+          </script>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
           <a href="https://github.com/fudan-zvg/tet-splatting">
@@ -391,15 +390,15 @@
         <td style="padding:20px;width:25%;vertical-align:middle">
           <img src="images/DT-NeRF/depth.jpg" alt="clean-usnob" width="160" height="160">
         </td>
-        <td width="75%" valign="middle">
+        <td style="padding:20px;width:75%;vertical-align:middle">
           <a href="https://arxiv.org/abs/2303.09952">
-            <span class="papertitle">Single-view Neural Radiance Fields with Depth Teacher</span>
+            Single-view Neural Radiance Fields with Depth Teacher</span>
           </a>
           <br>
             <a href="https://github.com/Fumore">Yurui Chen</a>,
             <strong>Chun Gu</strong>,
             <a href="http://feihuzhang.com/">Feihu Zhang</a>,
-            <a href="https://lzrobots.github.io/">Li Zhang</a>,
+            <a href="https://lzrobots.github.io/">Li Zhang</a>
           <br>
           <em>ICLR workshop 2023</em>
           <br>
