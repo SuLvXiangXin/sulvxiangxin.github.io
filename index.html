@@ -95,7 +95,7 @@
         </td>
       </tr>
       
-      <tr onmouseout="gstracer_stop()" onmouseover="gstracer_start()">
+      <tr>
         <td style="padding:20px;width:25%;vertical-align:middle">
           <img src="images/gstracer/capture.jpg" alt="clean-usnob" width="160">
         </td>
@@ -118,6 +118,48 @@
         </td>
       </tr>
 
+      <tr onmouseout="gslidar_stop()" onmouseover="gslidar_start()">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='gslidar'><video  width=100% height=100% muted autoplay loop>
+            <source src="images/gslidar/teaser.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='images/gslidar/capture.jpg' width="160">
+          </div>
+          <script type="text/javascript">
+            function gslidar_start() {
+              document.getElementById('gslidar').style.opacity = "1";
+            }
+  
+            function gslidar_stop() {
+              document.getElementById('gslidar').style.opacity = "0";
+            }
+            gslidar_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://github.com/fudan-zvg/gs-lidar">
+            <span class="papertitle">GS-LiDAR: Generating Realistic LiDAR Point Clouds with Panoramic Gaussian Splatting</span>
+          </a>
+          <br>
+          Junzhe Jiang,
+          <strong>Chun Gu</strong>,
+          Yurui Chen,
+          <a href="https://lzrobots.github.io/">Li Zhang</a>
+          <br>
+          <em>ICLR</em>, 2025
+          <br>
+          <a href="https://arxiv.org/abs/2501.13971">arXiv</a>
+          /
+          <a href="https://github.com/fudan-zvg/gs-lidar">code  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/fudan-zvg/gs-lidar"></span></a>
+          <p></p>
+          <p>
+            A novel framework for generating realistic LiDAR point clouds with panoramic Gaussian splatting.
+          </p>
+        </td>
+      </tr>
+      
       <tr onmouseout="refgs_stop()" onmouseover="refgs_start()">
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
@@ -149,7 +191,7 @@
           <a href="https://xiatian-zhu.github.io/">Xiatian Zhu</a>,
           <a href="https://lzrobots.github.io/">Li Zhang</a>
           <br>
-          <em>arXiv</em>, 2024
+          <em>ICLR</em>, 2025
           <br>
           <a href="https://arxiv.org/abs/2412.19282">arXiv</a>
           /
@@ -159,6 +201,32 @@
           <p></p>
           <p>
             A Reflective Gaussian splatting framework characterized with two components: (I) Physically based deferred rendering; (II) Gaussian-grounded inter-reflection.
+          </p>
+        </td>
+      </tr>
+
+      <tr>
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <img src="images/diffusion2/teaser.jpg" alt="clean-usnob" width="160">
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://github.com/fudan-zvg/diffusion-square">
+            <span class="papertitle">Diffusion²: Dynamic 3D Content Generation via Score Composition of Orthogonal Diffusion Models</span>
+          </a>
+          <br>
+          <a href="https://github.com/Alexander0Yang/">Zeyu Yang*</a>,
+          <a href="https://github.com/mdarhdarz/">Zijie Pan*</a>,
+          <strong>Chun Gu</strong>,
+          <a href="https://lzrobots.github.io/">Li Zhang</a>
+          <br>
+          <em>ICLR</em>, 2025
+          <br>
+          <a href="https://arxiv.org/abs/2404.02148">arXiv</a>
+          /
+          <a href="https://github.com/fudan-zvg/diffusion-square">code  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/fudan-zvg/diffusion-square"></span></a>
+          <p></p>
+          <p>
+            In this paper, we propose to achieve 4D generation from directly sampling the dense multi-view multi-frame observation of dynamic content by composing the estimated score of pretrained video and multi-view diffusion models that have learned strong prior of dynamic and geometry.
           </p>
         </td>
       </tr>
@@ -223,32 +291,6 @@
           <p></p>
           <p>
             Integrating surface-based volumetric rendering within a structured tetrahedral grid, utilizing tetrahedra for splatting.
-          </p>
-        </td>
-      </tr>
-
-      <tr onmouseout="diffusion2_stop()" onmouseover="diffusion2_start()">
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <img src="images/diffusion2/teaser.jpg" alt="clean-usnob" width="160">
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://github.com/fudan-zvg/diffusion-square">
-            <span class="papertitle">Diffusion²: Dynamic 3D Content Generation via Score Composition of Orthogonal Diffusion Models</span>
-          </a>
-          <br>
-          <a href="https://github.com/Alexander0Yang/">Zeyu Yang*</a>,
-          <a href="https://github.com/mdarhdarz/">Zijie Pan*</a>,
-          <strong>Chun Gu</strong>,
-          <a href="https://lzrobots.github.io/">Li Zhang</a>
-          <br>
-          <em>arXiv</em>, 2024
-          <br>
-          <a href="https://arxiv.org/abs/2404.02148">arXiv</a>
-          /
-          <a href="https://github.com/fudan-zvg/diffusion-square">code  <span class="papertitle"><span style="vertical-align: middle;"><img src="https://img.shields.io/github/stars/fudan-zvg/diffusion-square"></span></a>
-          <p></p>
-          <p>
-            In this paper, we propose to achieve 4D generation from directly sampling the dense multi-view multi-frame observation of dynamic content by composing the estimated score of pretrained video and multi-view diffusion models that have learned strong prior of dynamic and geometry.
           </p>
         </td>
       </tr>
